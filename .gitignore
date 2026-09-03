@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+.pnpm
+.yarn
+
+# environment variables (contains DB password, must never be committed)
+.env
+.env.local
+.env*.local
+
+# Next.js build output
+.next/
+out/
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# editor/IDE
+.vscode/
+.idea/
