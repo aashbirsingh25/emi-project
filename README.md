@@ -36,7 +36,7 @@ App will be running at [http://localhost:3000](http://localhost:3000)
 
 ## Deployed Demo
 
-Deployed application URL: [DEPLOY_URL_PLACEHOLDER]
+Deployed application URL: https://emi-project-eosin.vercel.app
 
 ## Prisma Schema Summary
 
