@@ -1,20 +1,57 @@
-# EMI Store
+# 📱 EMI Store
 
 A full-stack Next.js 14 web application that displays smartphones with multiple EMI plans backed by mutual funds — built for the 1Fi SDE1 assignment.
 
-## Tech Stack
+---
+
+## 🌐 Live Demo
+
+**[Visit the Live App](https://emi-project-eosin.vercel.app)**
+
+The app is deployed on Vercel and connected to a Neon PostgreSQL database.  
+Test it live: browse products, switch variants, select EMI plans.
+
+---
+
+## 📹 Demo Video
+
+**[Watch the Demo Video](https://youtu.be/lQjrEyIATAs?feature=shared)**
+
+2–5 minute walkthrough showing:
+- Homepage product catalog
+- Product detail page with variant switching
+- EMI plan selection and confirmation
+- Database schema and API responses
+
+---
+
+## 🛠️ Tech Stack
 
 - **Frontend:** Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS
 - **Backend:** Next.js API Route Handlers (Node.js)
 - **Database:** PostgreSQL (hosted on Neon)
 - **ORM:** Prisma ORM
+- **Deployment:** Vercel
 
-## Setup & Run Instructions
+---
+
+## ✨ Features
+
+- **Product Catalog:** Interactive storefront featuring flagship smartphones.
+- **Dynamic Variant Switching:** Instant switching between storage capacity and color options with updated pricing and imagery.
+- **Flexible EMI Plans:** Detailed tenure breakdowns (3 to 60 months) with zero-cost EMI options, interest rates, and cashback benefits.
+- **Interactive EMI Modal:** Select and confirm customized EMI plans with clear monthly breakdown.
+- **RESTful API:** Clean API routes returning structured JSON for product listings and detailed product variants with EMI plans.
+- **Responsive UI:** Modern, polished interface optimized for desktop and mobile devices.
+
+---
+
+## 💻 Setup & Run Instructions
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
-cd emi-store
+git clone https://github.com/aashbirsingh25/emi-project.git
+cd emi-project
 
 # 2. Install dependencies
 npm install
@@ -34,11 +71,23 @@ npm run dev
 
 App will be running at [http://localhost:3000](http://localhost:3000)
 
-## Deployed Demo
+---
 
-Deployed application URL: https://emi-project-eosin.vercel.app
+## 🚀 Deployment
 
-## Prisma Schema Summary
+This app is deployed on **Vercel** and uses **Neon PostgreSQL** for the database.
+
+- **Live URL:** [https://emi-project-eosin.vercel.app](https://emi-project-eosin.vercel.app)
+- **Repository:** [https://github.com/aashbirsingh25/emi-project](https://github.com/aashbirsingh25/emi-project)
+- **Database:** Neon PostgreSQL (serverless)
+- **CI/CD:** Automatic deployment on GitHub push
+
+### Environment Variables (Production)
+- `DATABASE_URL`: PostgreSQL connection string (configured in Vercel)
+
+---
+
+## 🗄️ Database Schema
 
 - **Product** — Represents a phone model
   - `id`, `slug` (unique, used in URL), `name`, `brand`, `description`, `createdAt`
@@ -47,9 +96,11 @@ Deployed application URL: https://emi-project-eosin.vercel.app
 - **EMIPlan** — Represents an installment option for a specific variant (belongs to `Variant`)
   - `id`, `variantId`, `tenureMonths`, `monthlyAmount`, `interestRate`, `cashback`
 
-Relationships: `Product (1) -> (N) Variant (1) -> (N) EMIPlan`
+**Relationships:** `Product (1) -> (N) Variant (1) -> (N) EMIPlan`
 
-## API Endpoint Documentation
+---
+
+## 🔌 API Endpoint Documentation
 
 ### 1. `GET /api/products`
 
@@ -175,7 +226,9 @@ Returns full product details with nested variants and their corresponding EMI pl
 }
 ```
 
-## Seed Data Summary
+---
+
+## 🌱 Seed Data Summary
 
 The seed script creates 3 flagship smartphone products, 7 variants, and 49 EMI plans:
 - **iPhone 17 Pro** (256GB Silver, 256GB Orange, 512GB Deep Blue)
